@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gestione Utenti</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+<div class="container">
+  <h1 class="mt-5">Gestione degli Utenti</h1>
+
+  <div class="mt-3">
+    <h3 id="form-title">Aggiungi Utente</h3>
+    <form id="user-form" onsubmit="submitUser(event)">
+      <input type="hidden" id="user-id">
+      
+      <div class="form-group">
+        <label for="nome">Nome</label>
+        <input type="text" class="form-control" id="nome" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="cognome">Cognome</label>
+        <input type="text" class="form-control" id="cognome" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" class="form-control" id="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="data_di_nascita">Data di Nascita</label>
+        <input type="date" class="form-control" id="data_di_nascita" required>
+      </div>
+      
+      <!-- Nuovi campi aggiunti -->
+      <div class="form-group">
+        <label for="tipo_contratto">Tipo Contratto</label>
+        <input type="text" class="form-control" id="tipo_contratto" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="ruolo">Ruolo</label>
+        <input type="text" class="form-control" id="ruolo" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="data_assunzione">Data di Assunzione</label>
+        <input type="date" class="form-control" id="data_assunzione" required>
+      </div>
+      
+      <button type="submit" class="btn btn-primary">Invia</button>
+    </form>
+  </div>
+
+  <div id="users" class="mt-4"></div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="app.js"></script>
+
+</body>
+</html>
