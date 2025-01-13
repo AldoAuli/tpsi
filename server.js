@@ -29,8 +29,7 @@ db.connect((err) => {
 app.get('/api/users', (req, res) => {
   const query = `
     SELECT id, nome, cognome, email, data_di_nascita, tipo_contratto, ruolo, data_assunzione
-    FROM users
-  `;
+    FROM users ORDER BY data_assunzione;`;
   db.query(query, (err, results) => {
     if (err) {
       console.error('Errore nella query:', err);
